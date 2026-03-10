@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Life Laptop Care | Muzaffarpur</title>
+    <meta name="description" content="Re-Life Laptop Care - Expert Laptop, Desktop & Printer Repair in Muzaffarpur. 2nd Hand Laptops Available. Located at Chhoti Kalyani.">
+    
+    <!-- Google Fonts: Poppins (Modern Tech Feel) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* =========================================
+           1. CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            /* Theme based on Business Card */
+            --primary: #3E2723;      /* Dark Coffee Brown (Card Background) */
+            --primary-light: #5D4037; /* Lighter Brown */
+            --accent: #D32F2F;       /* Red (Card Shapes/Icons) */
+            --accent-hover: #B71C1C; /* Darker Red for hover */
+            --whatsapp: #25D366;
+            --bg-light: #fbf9f8;     /* Very subtle warm gray/beige */
+            --text-main: #3E2723;    /* Using primary brown for main text */
+            --text-light: #5D4037;   /* Softer brown for paragraphs */
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(62, 39, 35, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(62, 39, 35, 0.1), 0 2px 4px -1px rgba(62, 39, 35, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(62, 39, 35, 0.1), 0 4px 6px -2px rgba(62, 39, 35, 0.05);
+            --radius: 8px; /* Slightly sharper corners like the card */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        
+        /* Utility Classes */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; position: relative; }
+        .bg-light { background-color: var(--bg-light); }
+        .text-center { text-align: center; }
+        .text-accent { color: var(--accent); }
+        .font-bold { font-weight: 700; }
+        
+        /* Typography */
+        h1, h2, h3, h4 { color: var(--primary); line-height: 1.2; }
+        h1 { font-size: 2.5rem; letter-spacing: -1px; }
+        h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; color: var(--text-light); }
+
+        /* =========================================
+           2. HEADER & NAVIGATION
+           ========================================= */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 3px solid var(--accent); /* Red line from card style */
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .logo i { 
+            color: var(--white); 
+            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-list { display: flex; gap: 35px; align-items: center; }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        .btn-header {
+            background: var(--accent);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        .btn-header:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+        /* Mobile Menu */
+        .hamburger { display: none; cursor: pointer; color: var(--primary); font-size: 1.5rem; }
+
+        /* =========================================
+           3. HERO SECTION
+           ========================================= */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            /* Warmer gradient to match brown theme */
+            background: linear-gradient(135deg, #fffcfb 0%, #efebe9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Shape from Card */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.05;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span { color: var(--accent); }
+
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(211, 47, 47, 0.3);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.39);
+        }
+        .btn-whatsapp:hover { background: #128c7e; transform: translateY(-2px); }
+
+        .hero-img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-img img {
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            border: 5px solid var(--white);
+            width: 100%;
+        }
+
+        /* Floating Stats in Hero */
+        .floating-stat {
+            position: absolute;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: float 3s ease-in-out infinite;
+            max-width: 220px;
+        }
+        .stat-icon {
+            width: 40px; height: 40px;
+            background: #ffebee; color: var(--accent);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .stat-text strong { display: block; color: var(--primary); font-size: 1rem; }
+        .stat-text span { font-size: 0.75rem; color: var(--text-light); }
+        .stat-1 { bottom: 40px; left: -20px; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* =========================================
+           4. SPECIAL BANNER (From Card Note)
+           ========================================= */
+        .special-banner {
+            background: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Red chevron shape */
+        .special-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, transparent 40%, rgba(211, 47, 47, 0.2) 40%, rgba(211, 47, 47, 0.2) 60%, transparent 60%);
+        }
+
+        .banner-content h3 { color: white; margin-bottom: 5px; font-weight: 700; text-transform: uppercase; }
+        .banner-content p { color: #d7ccc8; margin-bottom: 0; font-size: 1.1rem; }
+        .badge-new { background: var(--accent); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; vertical-align: middle; margin-left: 10px; }
+
+
+        /* =========================================
+           5. SERVICES SECTION
+           ========================================= */
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .divider { height: 4px; width: 60px; background: var(--accent); margin: 15px auto 0; border-radius: 2px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #efebe9;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 60px; height: 60px;
+            background: #ffebee;
+            color: var(--accent);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+        
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; }
+        
+        .service-link {
+            color: var(--accent);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .service-link:hover { gap: 10px; }
+
+        /* =========================================
+           6. PRODUCTS SECTION
+           ========================================= */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid #efebe9;
+        }
+        
+        .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+
+        .product-image {
+            height: 220px;
+            background: #fbf9f8;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-image img { transform: scale(1.05); }
+
+        .badge {
+            position: absolute; top: 15px; left: 15px;
+            background: var(--primary); color: white;
+            padding: 4px 10px; border-radius: 4px;
+            font-size: 0.75rem; font-weight: 700;
+            z-index: 2;
+        }
+
+        .product-details { padding: 20px; }
+        .product-cat { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+        .product-title { font-size: 1.1rem; font-weight: 700; margin: 5px 0 15px; color: var(--primary); }
+        
+        .btn-outline {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+        }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        /* =========================================
+           7. GALLERY SECTION STYLES
+           ========================================= */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            background: #f1f1f1;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(62,39,35,0.9), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* =========================================
+           8. INFO BAR & CONTACT
+           ========================================= */
+        .info-bar {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .info-box i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
+        .info-box h4 { color: white; margin-bottom: 5px; }
+        .info-box p { color: #d7ccc8; margin: 0; }
+
+        /* Contact Details */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border-top: 5px solid var(--accent);
+        }
+
+        .contact-details {
+            padding: 50px;
+            background: var(--bg-light);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap; 
+        }
+
+        .contact-icon {
+            width: 50px; height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-sm);
+            flex-shrink: 0;
+        }
+
+        .contact-text h5 { font-size: 1.1rem; font-weight: 700; margin-bottom: 5px; color: var(--primary); }
+        .contact-text p, .contact-text a { font-size: 0.95rem; color: var(--text-light); display: block; word-break: break-word; }
+        .contact-text a:hover { color: var(--accent); }
+
+        .map-wrapper { height: 100%; min-height: 400px; }
+        .map-wrapper iframe { width: 100%; height: 100%; border: none; }
+
+        /* =========================================
+           9. FOOTER REDESIGN
+           ========================================= */
+        footer {
+            background-color: #2b1b17;
+            color: #d7ccc8;
+            padding: 80px 0 0;
+            font-size: 0.95rem;
+            position: relative;
+            border-top: 5px solid var(--accent);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-logo {
+            font-size: 1.6rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .footer-logo span { color: var(--accent); }
+
+        .footer-desc {
+            color: #aca09d;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 35px; height: 35px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            align-items: center; justify-content: center;
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        .footer-social a:hover { background: var(--accent); }
+
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: #d7ccc8;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-links a:hover { color: var(--accent); padding-left: 5px; }
+        .footer-links i { font-size: 0.8rem; color: var(--accent); }
+
+        .footer-contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        .footer-contact-item i {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .copyright {
+            background: #1e1310;
+            padding: 25px 0;
+            text-align: center;
+            color: #8d7e7a;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Floating WA */
+        .wa-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        .wa-float:hover { transform: scale(1.1) rotate(10deg); }
+
+        /* =========================================
+           RESPONSIVE MEDIA QUERIES
+           ========================================= */
+        @media (max-width: 900px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-btns { justify-content: center; }
+            .hero-img { order: -1; max-width: 500px; margin: 0 auto; }
+            .stat-1 { left: 0; bottom: 20px; }
+            .contact-container { grid-template-columns: 1fr; }
+            .map-wrapper { min-height: 300px; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { height: 70px; }
+            .hamburger { display: block; }
+            
+            .nav-list {
+                position: fixed;
+                top: 70px; right: -100%;
+                width: 85%; height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                padding: 40px 20px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: 0.4s ease;
+                z-index: 999;
+            }
+            .nav-list.active { right: 0; }
+            .nav-link { font-size: 1.1rem; width: 100%; display: block; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+            
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .section { padding: 60px 0; }
+            
+            .contact-details { padding: 30px 20px; }
+            .info-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .hero { padding-top: 120px; padding-bottom: 60px; }
+            .services-grid, .products-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; }
+            .hero-btns { flex-direction: column; width: 100%; }
+            .footer-grid { grid-template-columns: 1fr; text-align: left; }
+            .footer-links a:hover { padding-left: 0; color: var(--accent); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-laptop"></i>
+                <div>Re-Life <span>Laptop Care</span></div>
+            </a>
+            
+            <nav>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <!-- Mobile Call Button visible in menu -->
+                    <li><a href="tel:7870971121" class="btn-header"><i class="fa-solid fa-phone"></i> Call Now</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-text fade-in-up">
+                <span class="hero-tag">Prop: Aale Imran</span>
+                <h1>Reliable Repairs for <br><span>Laptops & Printers</span></h1> <br>
+                <p>At Re-Life Laptop Care, your devices are in expert hands. With years of experience, our certified technicians handle everything from chip-level motherboard issues to complete system upgrades. We guarantee quick turnaround times, genuine spare parts, and 100% customer satisfaction for all major brands.<br><br><strong>Laptop Desktop & printer Repairing at best prices.</strong> We provide expert repair services and sales centrally at Chhoti Kalyani, Muzaffarpur.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/917870971121?text=Hi,%20I%20need%20to%20repair%20my%20device" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="#services" class="btn btn-primary">
+                        View Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-img fade-in-up">
+                <img src="assets/1a.jpg" alt="Laptop Repair Technician">
+                <!-- Floating Stat -->
+                <div class="floating-stat stat-1">
+                    <div class="stat-icon"><i class="fa-solid fa-laptop-medical"></i></div>
+                    <div class="stat-text">
+                        <strong>2nd Hand Laptops</strong>
+                        <span>Available Here</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Banner -->
+    <div class="special-banner">
+        <div class="container banner-content">
+            <h3><i class="fa-solid fa-bullhorn"></i> Special Offer</h3>
+            <p><strong>Laptop Desktop & printer Repairing at best prices</strong></p>
+            <p style="margin-top: 5px;"><strong>Laptop & Desktop All accessories</strong> & 2nd Hand Laptops Available <span class="badge-new">Check Now</span></p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-details" style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="text-accent font-bold">ABOUT US</span>
+                    <h2>Your Trusted Laptop Care</h2>
+                    <p>Re-Life Laptop Care, managed by <strong>Aale Imran</strong>, is your one-stop solution for all electronics needs. We specialize in chip-level repairing of motherboards, screen replacements, and printer servicing.</p>
+                    <p>We assure quality service with genuine spare parts for all major brands.</p>
+                    <ul style="margin-top: 10px;">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check text-accent"></i> Laptop Desktop & printer Repairing at best prices</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check text-accent"></i> Laptop & Desktop All accessories</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check text-accent"></i> 2nd Hand Laptops Available</li>
+                    </ul>
+                </div>
+                <!-- Updated Background Image -->
+                <div class="map-wrapper" style="background: url('assets/2.jpg') center/cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="text-accent font-bold">WHAT WE DO</span>
+                <h2>Our Services</h2>
+                <div class="divider"></div>
+                <p style="margin-top: 15px;">Complete solutions for your hardware issues.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h3>Laptop Repair</h3>
+                    <p>Complete repair solutions for all laptop models including brands <b>Dell, HP, Lenovo, Acer, and Asus's.</b></p>
+                    <a href="https://wa.me/917870971121?text=Hello,%20I%20visited%20your%20website%20and%20I%20would%20like%20to%20inquire%20about%20your%20Laptop%20Repair%20service.%20Can%20you%20please%20help%20me%20with%20this%3F" class="service-link" target="_blank">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>Monitor Repair</h3>
+                    <p>Expert repair services for LCD and LED monitors, display troubleshooting, and screen fixes.</p>
+                    <a href="https://wa.me/917870971121?text=Hello,%20I%20want%20to%20get%20my%20Monitor%20repaired.%20Can%20you%20share%20the%20details%20and%20estimated%20cost%3F" class="service-link" target="_blank">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-print"></i></div>
+                    <h3>Printer Repair</h3>
+                    <p>Expert service for laser and inkjet printers. Cartridge refilling and head cleaning.</p>
+                    <a href="https://wa.me/917870971121?text=Hi,%20my%20printer%20is%20having%20some%20issues%20and%20needs%20repair.%20Can%20I%20get%20an%20estimate%3F" class="service-link" target="_blank">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-recycle"></i></div>
+                    <h3>2nd Hand Laptop</h3>
+                    <p>Buy certified refurbished laptops at the best prices with warranty.</p>
+                    <a href="https://wa.me/917870971121?text=Hello,%20I%20am%20interested%20in%20buying%20a%202nd%20Hand%20Laptop.%20What%20are%20the%20available%20models%20and%20prices%3F" class="service-link" target="_blank">Check Stock <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-keyboard"></i></div>
+                    <h3>Accessories</h3>
+                    <p>Keyboards, Mice, Chargers, Batteries, and Cables available.</p>
+                    <a href="https://wa.me/917870971121?text=Hi,%20I%20am%20looking%20for%20some%20laptop%2Fcomputer%20accessories.%20What%20do%20you%20have%20in%20stock%3F" class="service-link" target="_blank">Buy Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-brands fa-windows"></i></div>
+                    <h3>Software Support</h3>
+                    <p>Windows installation, Virus removal, and Data Recovery services.</p>
+                    <a href="https://wa.me/917870971121?text=Hello,%20I%20need%20help%20with%20software%20installation%2Fsupport%20for%20my%20computer.%20Can%20you%20assist%3F" class="service-link" target="_blank">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="text-accent font-bold">IN STOCK</span>
+                <h2>Top Selling Items</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">Original</span>
+                        <img src="assets/3.jpg" alt="Charger">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-cat">Power</div>
+                        <h4 class="product-title">Laptop Chargers</h4>
+                        <a href="https://wa.me/917870971121?text=Hello,%20I%20need%20to%20buy%20a%20new%20Laptop%20Charger.%20Could%20you%20let%20me%20know%20the%20price%20and%20availability%3F" class="btn-outline" target="_blank">Check Price</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">Refurbished</span>
+                        <img src="assets/4.jpg" alt="Laptop">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-cat">Laptops</div>
+                        <h4 class="product-title">Used Laptops (Good Condition)</h4>
+                        <a href="https://wa.me/917870971121?text=Hi,%20I%20saw%20the%20Used%20Laptops%20(Good%20Condition)%20on%20your%20website.%20Can%20you%20share%20the%20available%20models%3F" class="btn-outline" target="_blank">Check Models</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">New</span>
+                        <img src="assets/5.jpg" alt="Keyboard and Mouse">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-cat">Peripherals</div>
+                        <h4 class="product-title">Keyboard & Mouse</h4>
+                        <a href="https://wa.me/917870971121?text=Hello,%20I%20want%20to%20buy%20a%20Keyboard%20and%20Mouse.%20What%20options%20and%20prices%20do%20you%20have%3F" class="btn-outline" target="_blank">Check Price</a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge">Storage</span>
+                        <img src="assets/6.jpg" alt="SSD">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-cat">Upgrade</div>
+                        <h4 class="product-title">High Speed SSDs</h4>
+                        <a href="https://wa.me/917870971121?text=Hi,%20I%20want%20to%20upgrade%20to%20a%20High%20Speed%20SSD.%20What%20are%20the%20storage%20options%20and%20prices%3F" class="btn-outline" target="_blank">Check Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="text-accent font-bold">OUR WORK</span>
+                <div class="divider"></div>
+                <p style="margin-top: 15px;">A glimpse into our service center and recent repairs.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/7.jpg" alt="Motherboard Repair">
+                    <div class="gallery-overlay">Motherboard Repair</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/8.jpg" alt="Screen Replacement">
+                    <div class="gallery-overlay">Screen Replacement</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/9a.jpg" alt="Laptop Repair">
+                    <div class="gallery-overlay">Laptop Repair</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="container info-grid">
+            <div class="info-box">
+                <i class="fa-solid fa-user-tie"></i>
+                <h4>Prop: Aale Imran</h4>
+                <p>Expert Guidance</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-certificate"></i>
+                <h4>Quality Repair</h4>
+                <p>Satisfaction Guaranteed</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-tags"></i>
+                <h4>Best Rates</h4>
+                <p>Affordable Pricing</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="text-accent font-bold">GET IN TOUCH</span>
+                <h2>Visit Our Shop</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-container" style="margin-bottom: -50px; position: relative; z-index: 10;">
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 30px;">Visit us at Chhoti Kalyani for quick repairs.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-text">
+                            <h5>Phone Numbers</h5>
+                            <a href="tel:7870971121">+91 78709 71121</a>
+                            <a href="tel:7004757263">+91 70047 57263</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h5>Email Address</h5>
+                            <a href="mailto:alaym14@gmail.com">alaym14@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-text">
+                            <h5>Shop Address</h5>
+                            <p>Chhoti Kalyani, Near Indian Medical Hall,<br>Muzaffarpur - 842001</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <!-- Google Map Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.325930918466!2d85.39024827541242!3d26.120913877127908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed113542b32c97%3A0xc266d1e0165853c8!2sRe-Life%20Laptop%20Care!5e0!3m2!1sen!2sin!4v1771252691487!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="height: 50px;"></div> <!-- Spacer for overlapping contact card -->
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        Re-Life <span>Laptop Care</span>
+                    </a>
+                    <p class="footer-desc">Laptop Desktop & printer Repairing at best prices. Laptop & Desktop All accessories and 2nd Hand Laptops available. Quality you can trust.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/917870971121"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+                        <li><a href="#products"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Laptop Repair</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Printer Service</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Data Recovery</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> 2nd Hand Laptops</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Find Us -->
+                <div class="footer-col">
+                    <h4>Find Us</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Chhoti Kalyani, Near Indian Medical Hall, Muzaffarpur-842001</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 78709 71121</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>alaym14@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> Re-Life Laptop Care Muzaffarpur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/917870971121?text=Hello,%20I%20have%20an%20enquiry" class="wa-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Set Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-xmark');
+            });
+        });
+
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 4px 10px rgba(62, 39, 35, 0.1)";
+            } else {
+                header.style.boxShadow = "0 1px 3px rgba(62, 39, 35, 0.1)";
+            }
+        });
+
+        // Scroll Animation (Fade Up)
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Apply animations to sections
+        document.querySelectorAll('.service-card, .product-card, .hero-text, .hero-img, .gallery-item').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
